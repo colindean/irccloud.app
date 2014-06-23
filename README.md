@@ -5,6 +5,9 @@ I really like to have chat apps separate from my browser, primarily so that
 they can continue running whenever I (rarely) have to restart the browser
 or it crashes.
 
+[IRCcloud](https://www.irccloud.com) is a great IRC bouncer and chat app in
+one.
+
 How To
 ======
 
