@@ -9,7 +9,7 @@ task :open do
 end
 
 desc "Installs the app to User's Applications"
-task :install do
+task :install => :build do
   dir = [ENV['HOME'], 'Applications'].join File::SEPARATOR
   directory dir
   FileUtils.cp_r "IRCCloud.app", dir
