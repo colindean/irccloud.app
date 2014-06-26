@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>IRCcloud</title>
+  <title>IRCCloud</title>
   <style type="text/css" media="screen">
     html, body {
       height: 100%;
@@ -15,22 +15,48 @@
 
     h1 {
       color: #E0E0E0;
-      margin: 18% 0;
+      margin: 3% 0 3% 0;
       text-align: center;
       font-family: helvetica;
     }
+    #logo {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    #logo img {
+      -webkit-animation: blur-animation 3s;
+    }
+
+    @-webkit-keyframes blur-animation {
+      0% {
+        -webkit-filter: blur(10px);
+        filter: blur(10px);
+      }
+      50% {
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+      }
+      100% {
+        -webkit-filter: blur(0px);
+        filter: blur(0px);
+      }
+    }
   </style>
 
-  <link rel="icon" type="image/png" href="icon-152x152.png" sizes="152x152"/>
-  
-  <meta http-equiv="refresh" content="5;url=https://irccloud.com">  
+  <link rel="icon" type="image/png" href="application.png"/>
+
+  <meta http-equiv="refresh" content="2.5;url=https://irccloud.com">
 </head>
 <body>
-  
+
   <script type="text/javascript" charset="utf-8">
-      macgap.growl.notify({title: 'IRCcloud launched', content: 'Chat away!'});
+      //macgap.growl.notify({title: 'IRCcloud launched', content: 'Chat away!'});
   </script>
-  
-  <h1>Launching IRCcloud...</h1>
+
+  <h1>Connecting to IRCCloud...</h1>
+  <div id="logo">
+    <img src="application.png"/>
+  </div>
 </body>
 </html>
