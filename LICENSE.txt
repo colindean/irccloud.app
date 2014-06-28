@@ -1,0 +1,9 @@
+IRCCloud.app is licensed under CC0, or Public Domain where possible.
+
+To the extent possible under law, Colin Dean has waived all copyright and
+related or neighboring rights to IRCCloud.app. This work is published from: 
+United States of America.
+
+Contains assets used under fair use:
+
+IRCCloud logo is copyright IRCCloud Ltd.
