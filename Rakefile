@@ -15,4 +15,16 @@ task :install => :build do
   FileUtils.cp_r "IRCCloud.app", dir
 end
 
+task :release => :build do
+  version = `semver tag`.strip!
+  tool = "github-release"
+  stdargs = "-r irccloud.app -t #{version}"
+  archive = "IRCCloud.app-#{version}.zip"
+
+  sh "zip -rq9 #{archive} IRCCloud.app"
+  sh "#{tool} release #{stdargs}"
+  sh "#{tool} upload #{stdargs} -n 'IRCCloud.app #{version}' -f #{archive}"
+  sh "#{tool} info #{stdargs}"
+end
+
 task :default => :build
