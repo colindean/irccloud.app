@@ -51,7 +51,7 @@
 <body>
 
   <script type="text/javascript" charset="utf-8">
-      //macgap.growl.notify({title: 'IRCcloud launched', content: 'Chat away!'});
+      macgap.menu.getItem('Window').submenu().addItem('Reload', 'cmd+r', function() { window.location.reload() });
   </script>
 
   <h1>Connecting to IRCCloud...</h1>
