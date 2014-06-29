@@ -51,7 +51,32 @@
 <body>
 
   <script type="text/javascript" charset="utf-8">
-      macgap.menu.getItem('Window').submenu().addItem('Reload', 'cmd+r', function() { window.location.reload() });
+      function isBounceDisabled(){
+        return macgap.userDefaults.getBool("macgap_bounceDisabled");
+      }
+      function bounceOnMention(value, menu){
+        var actual = !value
+        macgap.userDefaults.setBool("macgap_bounceDisabled", actual);
+        if(actual){
+          menu.addItem('Enable mention bounce', 'cmd+opt+b', function(){bounceOnMention(true, menu)})
+        } else {
+          menu.addItem('Disable mention bounce', 'cmd+opt+b', function(){bounceOnMention(false, menu)})
+        }
+        console.log("bounceOnMention = " + value)
+      }
+
+      function getDefaults(){
+        JSON.parse(macgap.userDefaults.getMyDefaults());
+      }
+
+      var menu = macgap.menu.getItem('Window').submenu();
+      menu.addItem('Reload', 'cmd+r', function() { window.location.reload() });
+
+      if(isBounceDisabled){
+        bounceOnMention(false, menu);
+      } else {
+        bounceOnMention(true, menu)
+      }
   </script>
 
   <h1>Connecting to IRCCloud...</h1>
