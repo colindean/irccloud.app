@@ -1,12 +1,19 @@
+GIT
+  remote: http://github.com/colindean/macgap-rb
+  revision: 4858a81fba0f9c5f32c78a3fdac6eabd101b0c37
+  specs:
+    macgap (0.0.9)
+      plist
+
 GEM
   remote: http://rubygems.org/
   specs:
-    macgap (0.0.8)
+    plist (3.1.0)
     semver2 (3.3.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  macgap
+  macgap!
   semver2
