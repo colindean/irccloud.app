@@ -9,6 +9,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     plist (3.1.0)
+    rake (0.9.6)
     semver2 (3.3.3)
 
 PLATFORMS
@@ -16,4 +17,5 @@ PLATFORMS
 
 DEPENDENCIES
   macgap!
+  rake
   semver2
