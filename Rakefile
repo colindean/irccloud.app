@@ -1,6 +1,7 @@
 desc "Builds IRCCloud OSX app"
 task :build do
-  sh "macgap build --name IRCCloud irccloud"
+  version = `semver tag`.strip!
+  sh "macgap build --name IRCCloud --version #{version} irccloud"
 end
 
 desc "Opens the app"
