@@ -16,6 +16,7 @@ task :install => :build do
   FileUtils.cp_r "IRCCloud.app", dir
 end
 
+desc "Release the app to Github Release Archive"
 task :release => :build do
   version = `semver tag`.strip!
   tool = "github-release"
