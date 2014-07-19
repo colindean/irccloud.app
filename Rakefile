@@ -13,7 +13,7 @@ desc "Installs the app to User's Applications"
 task :install => :build do
   dir = [ENV['HOME'], 'Applications'].join File::SEPARATOR
   directory dir
-  FileUtils.cp_r "IRCCloud.app", dir
+  FileUtils.cp_r "IRCCloud.app", dir, remove_destination: true
 end
 
 desc "Release the app to Github Release Archive"
