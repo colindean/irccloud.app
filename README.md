@@ -13,6 +13,8 @@ How To
 
 1. Clone it.
 2. `bundle install`
-3. `rake`
-4. `rake open`
-5. `rake install`
+3. `bundle exec rake`
+4. `bundle exec rake open`
+5. `bundle exec rake install`
+
+You may be able to leave off the `bundle exec` part. YMMV.
