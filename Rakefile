@@ -25,7 +25,7 @@ task :release => :build do
 
   sh "zip -rq9 #{archive} IRCCloud.app"
   sh "#{tool} release #{stdargs}"
-  sh "#{tool} upload #{stdargs} -n 'IRCCloud.app #{version}' -f #{archive}"
+  sh "#{tool} upload #{stdargs} -n 'IRCCloud.app-#{version}.zip' -f #{archive}"
   sh "#{tool} info #{stdargs}"
 end
 
