@@ -1,6 +1,8 @@
+require 'semver'
+
 desc "Builds IRCCloud OSX app"
 task :build do
-  version = `semver tag`.strip!
+  version = SemVer.find
   sh "macgap build --name IRCCloud --version #{version} irccloud"
 end
 
@@ -18,7 +20,7 @@ end
 
 desc "Release the app to Github Release Archive"
 task :release => :build do
-  version = `semver tag`.strip!
+  version = SemVer.find
   tool = "github-release"
   stdargs = "-r irccloud.app -t #{version}"
   archive = "IRCCloud.app-#{version}.zip"
